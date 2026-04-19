@@ -17,7 +17,7 @@ def call_api(endpoint: str, features: dict):
         return response.json()
     except requests.exceptions.ConnectionError:
         st.error(
-            "❌ Cannot connect to FastAPI server. Start it first:\n\n"
+            "Cannot connect to FastAPI server. Start it first:\n\n"
             "`uvicorn apps.B_fastapi:app --reload`"
         )
         return None
@@ -111,6 +111,7 @@ def main():
                 st.subheader("Classification Result")
                 if result["placed"]:
                     st.success(result["message"])
+                    st.balloons()
                 else:
                     st.error(result["message"])
                 col_a, col_b = st.columns(2)
@@ -131,6 +132,7 @@ def main():
                 st.subheader("Full Prediction Result")
                 if result["placed"]:
                     st.success(result["summary"])
+                    st.balloons()
                 else:
                     st.error(result["summary"])
                 col_a, col_b, col_c = st.columns(3)
