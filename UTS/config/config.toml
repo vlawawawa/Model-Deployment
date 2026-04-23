@@ -1,0 +1,41 @@
+# ── Data 
+[data]
+raw_file      = "B.csv"
+drop_cols     = ["student_id"]
+target_class  = "placement_status"
+target_reg    = "salary_package_lpa"
+
+num_features = [
+    "ssc_percentage", "hsc_percentage", "degree_percentage", "cgpa",
+    "entrance_exam_score", "technical_skill_score", "soft_skill_score",
+    "internship_count", "live_projects", "work_experience_months",
+    "certifications", "attendance_percentage", "backlogs",
+]
+cat_features = ["gender", "extracurricular_activities"]
+
+# ── Artifacts 
+[artifacts]
+classifier = "placement_classifier.pkl"
+regressor  = "salary_regressor.pkl"
+
+# ── Training 
+[training]
+random_state       = 42
+test_size          = 0.2
+accuracy_threshold = 0.75
+
+# ── Model: Random Forest Classifier 
+[model.classifier]
+criterion     = "gini"
+max_depth     = 8
+n_estimators  = 100
+
+# ── Model: Random Forest Regressor 
+[model.regressor]
+max_depth     = 8
+n_estimators  = 100
+
+# ── MLflow 
+[mlflow]
+experiment_classifier = "Student Placement Classification"
+experiment_regressor  = "Student Salary Regression"
