@@ -6,8 +6,8 @@
 set -eu
 
 # -------- EDIT THESE -----------------------------------------------------
-GIT_REPO="https://github.com/vlawawawa/Model-Deployment/Assignments/Spaceship_Titanic_Cloud.git"
-SUBFOLDER=""                  # path inside repo; leave empty if app at root
+GIT_REPO="https://github.com/vlawawawa/Model-Deployment.git"
+SUBFOLDER="Assignments/Spaceship_Titanic_Cloud"
 APP_FILE="streamlit_app.py"
 ENDPOINT_NAME="spaceship-endpoint"
 # -------------------------------------------------------------------------
