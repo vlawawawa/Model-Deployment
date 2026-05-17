@@ -6,7 +6,7 @@ from sagemaker.sklearn.model import SKLearnModel
 
 
 # ---- EDIT THESE ---------------------------------------------------------
-BUCKET = "<your-bucket>"
+BUCKET = "spaceship-titanic-valen-0313"
 MODEL_S3_KEY = "spaceship/model.tar.gz"
 ENDPOINT_NAME = "spaceship-endpoint"
 # -------------------------------------------------------------------------
@@ -14,6 +14,7 @@ ENDPOINT_NAME = "spaceship-endpoint"
 REGION = "us-east-1"
 INSTANCE_TYPE = "ml.m5.large"
 FRAMEWORK_VERSION = "1.2-1"
+PY_VERSION = "py3"
 
 
 def get_lab_role_arn() -> str:
