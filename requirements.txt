@@ -1,28 +1,8 @@
-# ── Core Data Science ──────────────────────────────────────────────────────
-numpy
-pandas
-matplotlib
-seaborn
-
-# ── Machine Learning ────────────────────────────────────────────────────────
-scikit-learn
-joblib
-
-# ── Hyperparameter Optimization ─────────────────────────────────────────────
-optuna
-
-# ── Experiment Tracking & Model Registry ────────────────────────────────────
-mlflow
-
-# ── API Serving ──────────────────────────────────────────────────────────────
-fastapi
-uvicorn
-pydantic
-requests
-
-# ── Web UI ───────────────────────────────────────────────────────────────────
-streamlit>=1.41
-
-# ── Jupyter ──────────────────────────────────────────────────────────────────
-jupyter
-ipywidgets
+scikit-learn==1.8.0
+pandas==2.3.3
+numpy==2.4.4
+xgboost==3.2.0
+lightgbm==4.6.0
+joblib==1.5.3
+mlflow==3.13.0
+streamlit==1.58.0
